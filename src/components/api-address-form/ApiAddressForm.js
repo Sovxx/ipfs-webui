@@ -21,7 +21,7 @@ const ApiAddressForm = ({ t, doUpdateIpfsApiAddress, ipfsApiAddress = '' }) => {
 
   return (
     <form onSubmit={onSubmit}>
-      <label htmlFor='api-address' className='db f7 mb2 ttu tracked charcoal pl1'>{t('apiAddressForm.apiLabel')}</label>
+      <label htmlFor='api-address' className='db f7 mb2 ttu tracked charcoal pl1'>{t('terms.apiAddress')}</label>
       <input id='api-address'
         type='text'
         className='w-100 lh-copy monospace f5 pl1 pv1 mb2 charcoal input-reset ba b--black-20 br1 focus-outline'
@@ -29,7 +29,7 @@ const ApiAddressForm = ({ t, doUpdateIpfsApiAddress, ipfsApiAddress = '' }) => {
         onKeyPress={onKeyPress}
         value={value} />
       <div className='tr'>
-        <Button className="tc">{t('apiAddressForm.submitButton')}</Button>
+        <Button className="tc">{t('actions.submit')}</Button>
       </div>
     </form>
   )
@@ -38,5 +38,5 @@ const ApiAddressForm = ({ t, doUpdateIpfsApiAddress, ipfsApiAddress = '' }) => {
 export default connect(
   'doUpdateIpfsApiAddress',
   'selectIpfsApiAddress',
-  withTranslation('welcome')(ApiAddressForm)
+  withTranslation('app')(ApiAddressForm)
 )
