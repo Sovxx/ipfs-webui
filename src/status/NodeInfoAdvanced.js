@@ -45,7 +45,7 @@ class NodeInfoAdvanced extends React.Component {
         <DefinitionList className='mt3'>
           <Definition advanced term={t('gateway')} desc={gatewayUrl} />
           {ipfsProvider === 'httpClient'
-            ? <Definition advanced term={t('api')} desc={
+            ? <Definition advanced term={t('app:terms.api')} desc={
               isMultiaddr(ipfsApiAddress)
                 ? (
                   <div className="flex items-center">
@@ -54,7 +54,7 @@ class NodeInfoAdvanced extends React.Component {
                   </div>)
                 : ipfsApiAddress
             } />
-            : <Definition advanced term={t('api')} desc={<ProviderLink name={ipfsProvider} />} />
+            : <Definition advanced term={t('app:terms.api')} desc={<ProviderLink name={ipfsProvider} />} />
           }
           <Definition advanced term={t('addresses')} desc={addresses} />
           <Definition advanced term={t('publicKey')} desc={publicKey} />
