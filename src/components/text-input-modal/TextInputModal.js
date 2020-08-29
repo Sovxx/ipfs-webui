@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Button from '../../components/button/Button'
 import { Modal, ModalActions, ModalBody } from '../modal/Modal'
+import { withTranslation } from 'react-i18next'
 
 class TextInputModal extends React.Component {
   static propTypes = {
@@ -81,6 +82,7 @@ class TextInputModal extends React.Component {
 
   render () {
     const {
+      t,
       onCancel,
       onChange,
       mustBeDifferent,
@@ -114,7 +116,7 @@ class TextInputModal extends React.Component {
         </ModalBody>
 
         <ModalActions>
-          <Button className='ma2 tc' bg='bg-gray' onClick={onCancel}>Cancel</Button>
+          <Button className='ma2 tc' bg='bg-gray' onClick={onCancel}>{t('app:actions.cancel')}</Button>
           <Button className='ma2 tc' bg='bg-teal' disabled={this.isDisabled} onClick={this.onSubmit}>{submitText}</Button>
         </ModalActions>
       </Modal>
@@ -122,4 +124,4 @@ class TextInputModal extends React.Component {
   }
 }
 
-export default TextInputModal
+export default withTranslation('files')(TextInputModal)
