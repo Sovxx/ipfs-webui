@@ -89,7 +89,7 @@ const ConnectionStatus = ({ t, connected, sameOrigin, ipfsApiAddress, doUpdateIp
       <div>
         <div className='flex flex-wrap items-center'>
           <GlyphTick style={{ height: 76 }} className='fill-green' role='presentation' />
-          <h1 className='montserrat fw4 charcoal ma0 f3 green'>{t('connected.header')}</h1>
+          <h1 className='montserrat fw4 charcoal ma0 f3 green'>{t('app:status.connectedToIpfs')}</h1>
         </div>
         <p className='fw6 mt1 ml3-ns w-100'>{t('connected.paragraph1')}</p>
       </div>
@@ -104,7 +104,7 @@ const ConnectionStatus = ({ t, connected, sameOrigin, ipfsApiAddress, doUpdateIp
     <div>
       <div className='flex flex-wrap items-center'>
         <GlyphAttention style={{ height: 76 }} className='fill-red mr' role='presentation' />
-        <h1 className='montserrat fw4 charcoal ma0 f3 red'>{t('notConnected.header')}</h1>
+        <h1 className='montserrat fw4 charcoal ma0 f3 red'>{t('app:status.couldNotConnect')}</h1>
       </div>
       <Trans i18nKey='notConnected.paragraph1' t={t}>
         <p className='fw6 mb3'>Check out the installation guide in the <a className='link blue' href='https://docs.ipfs.io/install/command-line-quick-start/' target='_blank' rel='noopener noreferrer'>IPFS Docs</a>, or try these common fixes:</p>

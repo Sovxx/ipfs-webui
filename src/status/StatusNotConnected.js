@@ -9,7 +9,7 @@ const StatusNotConnected = ({ t }) => {
       <div className='flex items-center'>
         <GlyphAttention style={{ height: 76 }} className='fill-red mr' role='presentation' />
         <h1 className='montserrat fw4 charcoal ma0 f3 red'>
-          <Trans i18nKey='StatusNotConnected.header1' t={t}>
+          <Trans i18nKey='app:status.couldNotConnect' t={t}>
             Could not connect to the IPFS API
           </Trans>
         </h1>
