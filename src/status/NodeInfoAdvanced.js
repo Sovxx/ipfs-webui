@@ -57,7 +57,7 @@ class NodeInfoAdvanced extends React.Component {
             : <Definition advanced term={t('app:terms.api')} desc={<ProviderLink name={ipfsProvider} />} />
           }
           <Definition advanced term={t('app:terms.addresses')} desc={addresses} />
-          <Definition advanced term={t('publicKey')} desc={publicKey} />
+          <Definition advanced term={t('app:terms.publicKey')} desc={publicKey} />
         </DefinitionList>
       </Details>
     )
